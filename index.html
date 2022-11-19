@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<style>
+  body {
+    background-color: khaki;
+  }
+ button {
+  display: inline-block;
+  padding: 5px 1px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ce2121;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px rgba(153, 153, 153, 0.863);
+}
+
+button:hover {background-color: #ce2121}
+
+button:active {
+  background-color: #ce2121;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+mark{
+    color: yellow;
+    background-color: red;
+}
+input[type=text],select {
+  width: 30%;
+  padding: 10px 0px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+</style>
+
+<body align="center">
+   <h3> <mark> <b> Type The Opposite Of The Following Words And Press Check Button </b> </mark> </h3>
+<br />
+<br />
+<b>
+  <label for="fname">Always:</label>
+  <input type="text" id="fname" name="fname" required><br><br>
+  <label for="lname">Staying:</label>
+  <input type="text" id="lname" name="lname" required><br><br>
+  <label for="lname">Take:</label>
+  <input type="text" id="lname" name="lname" required><br><br>
+  <label for="lname">Me:</label>
+  <input type="text" id="lname" name="lname" required><br><br>
+  <label for="lname">Down:</label>
+  <input type="text" id="lname" name="lname" required><br><br>
+</b>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <button onclick="playAudio()" id="button"><b>Check</b></button>
+
+<br />
+<br/>
+<img id="picture" src="https://media.tenor.com/x8v1oNUOmg4AAAAM/rickroll-roll.gif"/>
+
+
+<script>
+$('#picture').hide(); // hide at beginning
+
+$('#button').click(function(){
+  $('#picture').show(); // show on button click
+});
+$('#picture').css("display", "none", center); // hide at beginning
+
+$('#button').click(function(){
+  $('#picture').css("display", "block"); // show button on click
+});
+</script>
+<audio id="myAudio">
+  <source src="roll.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+</script>
+
+</body>
+
+</html>
